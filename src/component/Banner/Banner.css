@@ -1,0 +1,45 @@
+.banner{
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    background-color: white;
+    color:#14213d;
+    /* position: fixed;
+    width:100%; */
+}
+
+.banner nav a{
+    
+   
+    text-decoration: none;
+    color:#14213d;
+}
+.bana{
+    height: 20vh;
+}
+
+.bana nav{
+    display:flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    background-color:white;
+    text-align: center;
+
+}
+
+
+
+.logo a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    color:black;
+
+    
+}
+@media(min-width:900px){
+    .bana{
+        display:none;
+    }
+}

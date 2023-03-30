@@ -1,0 +1,16 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  
+}
+.main{
+  flex:1;
+  background-color: rgb(210, 219, 219);
+  /* height:100%; */
+}
+
+

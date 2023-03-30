@@ -1,0 +1,18 @@
+.modal{
+    /* width: 40vh;
+    height: 40vh; */
+    margin: auto;
+    background-color:rgba(145, 133, 133,0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    
+}
+
+.modal h1,.modal p{
+    padding: 2rem;
+}
+

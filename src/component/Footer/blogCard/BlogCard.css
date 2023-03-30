@@ -1,0 +1,27 @@
+.bigDivWrapper{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.blogCardModal{
+    height: 20%;
+    width: 20%;
+    margin: auto;
+}
+
+.staticBlog{
+    background-color: rgb(157, 154, 154);
+    display: flex;
+    gap: 1rem;
+    width: 20vw;
+    height: 20rem;
+    margin: 1rem;
+    box-shadow: 5px;
+    border-radius: 5px;
+    
+    
+}

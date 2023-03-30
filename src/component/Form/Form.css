@@ -1,0 +1,32 @@
+.form{
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    padding: 2rem;
+    /* margin-top: 2rem; */
+    background-color: aqua;
+    margin:2rem auto auto;
+
+}
+.id{
+    font-size: 1rem;
+}
+
+.form input, .formDiv select{
+    width: 100%;
+    height: 2rem;
+}
+
+
+.formDiv{
+    margin-bottom: 2rem;
+}
+
+.closeBtn{
+    position:relative;
+    top: 0rem;
+    right: 12rem;
+    /* left: 2px; */
+    
+
+}
