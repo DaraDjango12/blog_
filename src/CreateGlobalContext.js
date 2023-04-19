@@ -5,6 +5,12 @@ import {v4 as uuidv4} from "uuid"
 export const GLobalContext = createContext();
 
 const CreateGlobalContext = ({ children }) => {
+
+
+  // const [cartNum,setCartNum]=useState("")
+  // setCartNum(cartNum+1)
+    
+  
   
 
   const [formodal, setFormModal] = useState(false);
@@ -17,9 +23,9 @@ const CreateGlobalContext = ({ children }) => {
     bookAuthor:"",
     bookPrice:"",
     bookISBN:"",
-    bookLink:"",
-    category:"",
-    id:uuidv4()
+    bookImageLink:"",
+    bookCategory:"",
+    
   });
 
   
@@ -43,6 +49,7 @@ const CreateGlobalContext = ({ children }) => {
     onChangeHandler,
     formData,
     setFormData,
+    
   };
 
   return (

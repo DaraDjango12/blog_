@@ -20,31 +20,33 @@ const BlogCard = () => {
 
   // without use effect "too many rerender error! will occur" but useEFFECT allows us control how many times the page rerenders
   const getPost = () => {
-    const local = JSON.parse(localStorage.getItem("formDetails"));
+    const local = JSON.parse(localStorage.getItem("formDetails"))? JSON.parse(localStorage.getItem("formDetails")):[];
 
     setPostData(local);
 
     // const {BlogTitle,date,blogText,location,imageLink}=allpost
   };
   const Blogstyle = styled.div`
-  
-    flex-wrap: wrap;
-    margin-top: 4rem;
+
+  margin-top: 4rem;
     padding: 1rem;
     padding: 1rem;
     
     color: black;
-    width: auto;
+    // width: auto;
     // display:flex;
-    gap: 1rem;
+    // gap: 1rem;
+  
+    
+    
 
     .newStaticBlog {
-      font-size: 1.8rem;
+      font-size: 1.2;
 
       
-      height: 20%;
-      padding: 0.5rem;
-      width: 20vw;
+      height: 30%;
+      padding: 1rem;
+      width: 30%;
       border-radius:50px
       color: black;
       
@@ -54,6 +56,8 @@ const BlogCard = () => {
       display: flex;
       text-align: center;
       justify-content: space-around;
+      
+
     }
 
     .static img {
@@ -72,41 +76,47 @@ const BlogCard = () => {
       flex: 1;
     }
 
-    @media(Min-width:500px){
-      flex-direction:column;
+    @media(Min-width:700px){
+      display:flex;
       gap:4rem;
-      width:100%;
-      padding:0;
-      background-color:#14213d;
+      width:100vw;
+      padding:1rem;
+      flex-wrap: wrap;
+      // background-color:#14213d;
+      width: auto;
+     gap: 1rem;
 
     };
 
     .newStaticBlog{
-      width:100%;
+      width:25%;
       background-color:rgb(136, 136, 194);
       border-radius:5px;
+      margin:2rem;
     }
   `
 
   ;
    
-
+// delete card section
   const DeleteHandler = (inputs) => {
-    const filterData = postData.filter((items) => items.id !== inputs.id);
+    const filterData = postData.filter((items) => items.id !==inputs.id);
+    
     if (filterData){
-      alert("")
-    }else{
-
-    localStorage.setItem("formDetails", JSON.stringify(filterData));
+      window.confirm("do you wish to delete")
+      localStorage.setItem("formDetails", JSON.stringify(filterData));
+    getPost();
+    
+    }else{  
+      window.confirm('your blog is empty')
     }
 
-    getPost();
   };
 
   // const shareUrl='https://www.youtube.com/watch?v=9WzIACv_mxs'
 
   return (
-    <Blogstyle className="bigDivWrapper">
+    <Blogstyle className="bigDivWrapper ">
       {postData &&
         postData.map((inputs) => {
           return (
@@ -133,7 +143,7 @@ const BlogCard = () => {
                 {openshare && 
                   <ReactShare />}
 
-                <AiOutlineDelete onClick={() => { DeleteHandler(inputs)
+                <AiOutlineDelete onClick={() => {DeleteHandler(inputs)
             
                 }} />
                 <AiOutlineEdit />

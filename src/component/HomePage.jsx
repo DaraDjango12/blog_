@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const toggleModal = () => {
     setFormModal(true);
-   };
+  };
 
   return (
     <div>
@@ -44,39 +44,44 @@ const HomePage = () => {
       </div>
 
       <div>
-      <div className="blogLine">
-        <div className="blogCard">
-          <img src="./beach.jpeg" alt="" />
-          <div>
-            <h1>Blogger</h1>
-            <p>Oh God Our Gow how i need you now , how ineed you now</p>
- 
-            <div className="staticIcons">
-              <BsShare />
-              <AiOutlineDelete />
-              <AiOutlineEdit />
-            </div>
-          </div>
-        </div>
-
-        <div>
+        <div className="blogLine">
           <div className="blogCard">
             <img src="./beach.jpeg" alt="" />
-            <div>
-              <h1>Blogger</h1>
-              <p>Oh God Our Gow how i need you now , how ineed you now</p>
+            <div className="cardBigDiv">
+              <div className="">
+                <h1>Blogger</h1>
+                <p>Oh God Our Gow how i need you now , how ineed you now</p>
+              </div>
+
               <div className="staticIcons">
                 <BsShare />
                 <AiOutlineDelete />
                 <AiOutlineEdit />
               </div>
             </div>
-            <div></div>
           </div>
-          
+
+          <div>
+            <div className="blogCard">
+              <img src="./beach.jpeg" alt="" />
+              <div className="cardBigDiv">
+                <div>
+                  <h1>Blogger</h1>
+                  <p>Oh God Our Gow how i need you now , how ineed you now</p>
+                </div>
+                <div className="staticIcons">
+                  <BsShare />
+                  <AiOutlineDelete />
+                  <AiOutlineEdit />
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <button className="addButton" onClick={toggleModal}>Add more ...</button>
+        <button className="addButton" onClick={toggleModal}>
+          Add more ...
+        </button>
       </div>
 
       <BlogCard />
